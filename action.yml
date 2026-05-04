@@ -22,5 +22,5 @@ runs:
         SOURCEPATH: "{{ inputs.source_path }}"
         TESTPATH: "{{ inputs.test_path }}"
       run: |
-        python -m vba_test_runner
+        python -m vbaUnit
       shell: bash
