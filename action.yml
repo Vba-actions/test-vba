@@ -1,0 +1,26 @@
+name: 'Lint VBA'
+description: 'Test VBA source code.'
+branding:
+  icon: "sun"
+  color: "red"
+inputs:
+  source_path:
+    description: 'Path to source files.'
+    default: "./src"
+  test_path:
+    description: 'Path to test files.'
+    default: "./tests"
+runs:
+  using: "composite"
+  steps:
+    - run: |
+        python -m pip install pip --upgrade
+        python -m pip install setuptools --upgrade
+        python -m pip install git+https://github.com/Beakerboy/vbaUnit.git@dev
+      shell: bash
+    - env:
+        SOURCEPATH: "{{ inputs.source_path }}"
+        TESTPATH: "{{ inputs.test_path }}"
+      run: |
+        python -m vba_test_runner --directory $SOURCEPATH -tests $TESTPATH
+      shell: bash
