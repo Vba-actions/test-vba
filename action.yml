@@ -12,6 +12,7 @@ inputs:
     default: "./tests"
   github_token:
     description: 'coveralls repo token'
+    default: "***"
 runs:
   using: "composite"
   steps:
