@@ -24,7 +24,7 @@ runs:
     - env:
         SOURCEPATH: "{{ inputs.source_path }}"
         TESTPATH: "{{ inputs.test_path }}"
-        COVERALLS_REPO_TOKEN: ${{ inputs.github_token }}
+        COVERALLS_REPO_TOKEN: "yeCb0Oq26tyTx0cvTJFp31CQXUTzUaCuD"
       run: |
         python -m vba_unit --coverage
       shell: bash
