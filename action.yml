@@ -10,6 +10,8 @@ inputs:
   test_path:
     description: 'Path to test files.'
     default: "./tests"
+  github_token:
+    description: 'coveralls repo token'
 runs:
   using: "composite"
   steps:
@@ -21,6 +23,7 @@ runs:
     - env:
         SOURCEPATH: "{{ inputs.source_path }}"
         TESTPATH: "{{ inputs.test_path }}"
+        COVERALLS_REPO_TOKEN: "{{ inputs.github_token }}"
       run: |
         python -m vba_unit --coverage
       shell: bash
