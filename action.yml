@@ -19,7 +19,7 @@ runs:
     - run: |
         python -m pip install pip --upgrade
         python -m pip install setuptools --upgrade
-        python -m pip install git+https://github.com/Beakerboy/vbaUnit.git@libraries
+        python -m pip install git+https://github.com/Beakerboy/vbaUnit.git@dev
         python -m pip install git+https://github.com/Beakerboy/Vba-Excel-Object-Library.git@dev
         python -m pip install git+https://github.com/Beakerboy/VbaStdLib.git@dev
       shell: bash
