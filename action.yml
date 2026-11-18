@@ -1,4 +1,4 @@
-name: 'Lint VBA'
+name: 'Test VBA'
 description: 'Test VBA source code.'
 branding:
   icon: "sun"
